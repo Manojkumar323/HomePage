@@ -1,0 +1,22 @@
+
+   /* Increase size of the dots */
+.slick-dots li button:before {
+    font-size: 15px; /* Change this value to increase dot size */
+    color: #646262; /* Change dot color */
+    transform: scale(1.5); /* Optional scaling */
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color:#aec744; /* Active dot color */
+  }
+
+  .slick-dots li {
+    margin-left: 10px;
+}
+.border div img{
+  height: 400px;
+  width: 100%;
+}
+
+
+

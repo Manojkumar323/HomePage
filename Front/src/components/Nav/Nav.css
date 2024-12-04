@@ -1,0 +1,57 @@
+/* Nav.css */
+.nav-list li a {
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  
+  .nav-list li a:hover {
+    color: #1e40af; /* Blue color on hover */
+  }
+  
+  .icons .icon-list li {
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .icons .icon-list li:hover {
+    color: #1e40af; /* Blue color on hover */
+  }
+  
+  .logo {
+    max-width: 100%;
+    height: auto;
+  }
+  .logo-container img{
+    width: 40px;
+    height: 30px;
+  }
+
+  
+  @media screen and (max-width: 640px) {
+    .nav-items {
+      display: none; /* Hide the navigation items on small screens */
+    }
+    .nav-list li a{
+        text-decoration: none;
+          }
+  
+    .sm:hidden button {
+      display: block; /* Show the mobile menu button */
+    }
+  }
+  
+  /* Add styles for mobile menu when the hamburger button is clicked */
+  .mobile-menu {
+    display: block;
+  }
+  .logo-container img{
+    width: 100px;
+  }
+
+  .nav-list li a{
+text-decoration: none;
+  }
