@@ -21,7 +21,7 @@ const Vision = () => {
       <section>
         <div className='head1'>
             
-            <span className='Vision'>Our Vision</span>
+            <h1 className='Vision'>Our Vision</h1>
         </div>
 
         
@@ -29,7 +29,7 @@ const Vision = () => {
           
 
             <div className='banner-1'> 
-                <div>
+                <div data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">
                     {/* React Slick Slider */}
                     <Slider {...settings} className="border-2">
                         <div>
@@ -45,7 +45,7 @@ const Vision = () => {
                 </div>
             </div>
             <div className='slide para'>
-              <p>We believe in creating a sustainable
+              <p data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">We believe in creating a sustainable
 platform where rural talent meets global
 demand. Tinykarts is not just an ecommerce
 site; it’s a movement to

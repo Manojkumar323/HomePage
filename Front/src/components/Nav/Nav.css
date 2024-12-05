@@ -1,16 +1,110 @@
 /* Nav.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 .nav-list li a {
     font-family: 'Arial', sans-serif;
     font-weight: 600;
     transition: color 0.3s ease;
     text-decoration: none;
+    font-family: "Poppins", serif;
+    margin: 0 5px;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+ 
+    position: relative;
+    display: inline-block;
+  
+    font-size: 20px;
+    text-decoration: none;
+  font-size: 15px;
+    margin: 0 5px;
+    position: relative;
+    display: inline-block;
+    transition: all 0.5s;
+  }
+  @keyframes wiggle92 {
+    0% { transform: translate(0px, 0px); }
+    25% { transform: translate(2px, 2px); }
+    50% { transform: translate(0px, 2px); }
+    75% { transform: translate(2px, 0px); }
+    100% { transform: translate(0px, 0px); }
+  }
+  .nav-list li a:hover {
+    animation: wiggle92 0.2s linear infinite;
+  }
+  .nav-list li a {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .nav-list li a::before,
+  .nav-list li a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    border: 0px solid transparent;
+    width: 0%;
+    height: 0%;
+    transition: all 0.3s ease;
+  }
+  
+  .nav-list li a::after {
+    top: 0;
+    left: 0;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+  }
+  
+  .nav-list li a::before {
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+  }
+
+  /* Hover effect */
+  .nav-list li a:hover::before,
+  .nav-list li a:hover::after {
+    width: 10px;
+    height: 10px;
+    border-color: #ffe115;
   }
   
   
   .nav-list li a:hover {
-    color: #1e40af; /* Blue color on hover */
+    color:#32781a; /* Blue color on hover */
   }
+  .logo-container img{
+    width: 70px;
+    cursor: pointer;
+  }
+  .logo-container{
+    background-color:#fffcf5  ;
+
+  }
+  .bg-white {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bg-white li a{
+  text-decoration: none;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
   
+
+}
+.bg-white li a:hover {
+  animation: wiggle92 0.2s linear infinite;
+}
+.bg-white li{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
   .icons .icon-list li {
     color: #333;
     cursor: pointer;
@@ -18,18 +112,21 @@
   }
   
   .icons .icon-list li:hover {
-    color: #1e40af; /* Blue color on hover */
+    color: #afc749; /* Blue color on hover */
   }
   
   .logo {
     max-width: 100%;
     height: auto;
-  }
-  .logo-container img{
-    width: 40px;
-    height: 30px;
-  }
+    transition: width 0.5s ease;
+    transition: translate 0.5s ease;
 
+  }
+  .logo:hover{
+    translate: 3px -5px;
+    
+  }
+  
   
   @media screen and (max-width: 640px) {
     .nav-items {
@@ -42,7 +139,7 @@
     .sm:hidden button {
       display: block; /* Show the mobile menu button */
     }
-  }
+    
   
   /* Add styles for mobile menu when the hamburger button is clicked */
   .mobile-menu {
@@ -52,6 +149,10 @@
     width: 100px;
   }
 
-  .nav-list li a{
-text-decoration: none;
+  }
+
+  @media screen and (max-width: 320px){
+    .nav-list li a{
+      text-decoration: none;
+    }
   }

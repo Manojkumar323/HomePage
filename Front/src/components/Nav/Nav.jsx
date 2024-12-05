@@ -12,7 +12,16 @@ const Nav = () => {
   // Function to toggle the mobile menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+
+    setClicked(true);
+    setTimeout(() => {  
+      setClicked(false); // Reset state after the transition
+    }, 300);
   };
+
+  // const handleClick = () => {
+  // // Match the duration of the transition (in ms)
+  // };
 
   return (
     <nav className="bg-white shadow-md">
@@ -24,13 +33,14 @@ const Nav = () => {
           </div>
           
           {/* Navigation Links */}
-          <div className="nav-items hidden sm:flex space-x-6">
-            <ul className="nav-list flex space-x-6">
-              <li><a href="#home" className="text-lg text-gray-800 hover:text-blue-500">HOME</a></li>
-              <li><a href="#products" className="text-lg text-gray-800 hover:text-blue-500">PRODUCT</a></li>
-              <li><a href="#contact" className="text-lg text-gray-800 hover:text-blue-500">CONTACT</a></li>
-            </ul>
-          </div>
+           {/* Navigation Links */}
+           <div className={`nav-items sm:flex space-x-6 transition-all duration-300 ${isMenuOpen ? "block" : "hidden"}`}>
+  <ul className="nav-list flex space-x-6">
+    <li><a href="#home" className="text-lg text-gray-800 hover:text-blue-500">HOME</a></li>
+    <li><a href="#products" className="text-lg text-gray-800 hover:text-blue-500">PRODUCT</a></li>
+    <li><a href="#contact" className="text-lg text-gray-800 hover:text-blue-500">CONTACT</a></li>
+  </ul>
+</div>
 
           {/* Icons */}
           <div className="icons flex space-x-6 text-xl">
@@ -43,8 +53,8 @@ const Nav = () => {
           
           {/* Mobile Menu Button (for smaller screens) */}
           <div className="sm:hidden">
-            <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
-              <FaBars />
+            <button onClick={toggleMenu}   onclclassName="text-gray-800 focus:outline-none" className='active'>
+              <FaBars/>
             </button>
           </div>
         </div>

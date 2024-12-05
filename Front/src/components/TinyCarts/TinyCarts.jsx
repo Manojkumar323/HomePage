@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import User from '/images/banner.jpg';  // Adjusted path
 import '../TinyCarts/TinyCarts.css';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Aos from "aos"
+import 'aos/dist/aos.css'; 
 // import './src/index.css'
 
 const TinyCarts = () => {
+  
 
 
   const settings = {
@@ -18,24 +21,26 @@ const TinyCarts = () => {
     autoplay: true, // Enable autoplay
     autoplaySpeed: 5000, // Change image every 5 seconds (5000ms)
   };
-
+  useEffect(()=>{
+    Aos.init()
+      },[]) 
   return (
     <div>
       <section>
-        <div className='head1'>
+        <div className='head1'  >
             <h1>Welcome to Tinykarts </h1>
             <span> Empowering Local Artisans, Connecting Global Markets</span>
         </div>
 
         <div className='banner'>
-            <div className='slide'>
-                <p>At Tinykarts, we bridge the gap between village craftsmanship and the global marketplace. Our platform is dedicated to showcasing the talent and creativity of small-scale manufacturers from rural communities, bringing their unique, high-quality products to customers worldwide.</p>
+            <div className='slide' >
+                <p data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">At Tinykarts, we bridge the gap between village craftsmanship and the global marketplace. Our platform is dedicated to showcasing the talent and creativity of small-scale manufacturers from rural communities, bringing their unique, high-quality products to customers worldwide.</p>
             </div>
 
             <div className='banner-1'> 
-                <div>
+                <div data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">
                     {/* React Slick Slider */}
-                    <Slider {...settings} className="border-2">
+                    <Slider {...settings} className="border-2" >
                         <div>
                             <img src={User} alt="Image 1" style={{ width: '100%' }}  className='img-round'  />
                         </div>
