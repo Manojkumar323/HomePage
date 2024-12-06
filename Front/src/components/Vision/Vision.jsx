@@ -1,4 +1,6 @@
 import React from 'react'
+import sale from '/images/sale1.jpg'; 
+import sale2 from '/images/shop2.jpg'; 
 import User from '/images/banner.jpg'; 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -33,10 +35,10 @@ const Vision = () => {
                     {/* React Slick Slider */}
                     <Slider {...settings} className="border-2">
                         <div>
-                            <img src={User} alt="Image 1" style={{ width: '100%' }}  className='img-round'  />
+                            <img src={sale} alt="Image 1" style={{ width: '100%' }}  className='img-round'  />
                         </div>
                         <div>
-                            <img src={User} alt="Image 2" style={{ width: '100%' }}   className='img-round'  />
+                            <img src={sale2} alt="Image 2" style={{ width: '100%' }}   className='img-round'  />
                         </div>
                         <div>
                             <img src={User} alt="Image 3" style={{ width: '100%' }}   className='img-round' />
