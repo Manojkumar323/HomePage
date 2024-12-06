@@ -103,7 +103,7 @@ background-color: #fffcf5 ;
 
 }
 .bg-white {
-  background-color: #fffcf5;
+  background-color: #fffcf5 !important; 
 }
 .bg-white li a:hover {
   animation: wiggle92 0.2s linear infinite;
