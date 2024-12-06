@@ -78,13 +78,16 @@
   width: 70px;
     cursor: pointer;
   }
-  .logo-container{
-    background-color:#fffcf5  ;
+  .px-4 {
+    
+  
+    width: 100%;
+}
 
-  }
+
   .bg-white {
     --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+background-color: #fffcf5 ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,6 +101,9 @@
   display: inline-block;
   
 
+}
+.bg-white {
+  background-color: #fffcf5;
 }
 .bg-white li a:hover {
   animation: wiggle92 0.2s linear infinite;

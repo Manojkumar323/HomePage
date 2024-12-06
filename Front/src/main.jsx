@@ -7,6 +7,7 @@ import Testimonials from './components/Nav/Slider/Testimonials.jsx'
 import TinyCarts from './components/TinyCarts/TinyCarts.jsx'
 import { Product } from './components/Product/Product.jsx'
 import Vision from './components/Vision/Vision.jsx'
+import Footer from './components/Footer/Footer.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -16,5 +17,6 @@ createRoot(document.getElementById('root')).render(
     <TinyCarts/>
     <Product/>
     <Vision/>
+    <Footer/>
   </StrictMode>
 )

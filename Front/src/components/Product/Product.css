@@ -9,7 +9,7 @@
     border-radius: 20px;
     background: linear-gradient(to top, #e4fdd3, #e9fcdc, #eefce5, #f3fbee, #f8faf7);
     position: relative; /* Required for positioning the pseudo-element */
-    position: relative;
+
     &::before,
     &::after {
       content: "";
@@ -104,6 +104,11 @@ position: relative;
     flex-direction: column;
     width: 100%;
     }
+    .slick-dots li button:before {
+        font-size: 11px;
+        color: #646262;
+        transform: scale(1.5);
+    }
     .All-box .box{
         margin-top: 80px;
     }
@@ -126,6 +131,11 @@ position: relative;
     }
     .head1 h1 {
         font-size: 30px;
+    }
+    .slick-dots li button:before {
+        font-size: 10px;
+        color: #646262;
+        transform: scale(1.5);
     }
 }
 
